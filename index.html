@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    .main {
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .outer-slider {
+        width: 50%;
+        height: 60%;
+        border: 1px solid red;
+        position: relative;
+    }
+
+    #slider {}
+
+    #slider>img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: none;
+    }
+
+    .active {
+        display: block !important;
+    }
+
+    .controls {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .controls>.fa-chevron-right {
+        background-color: red;
+        padding: 5px 5px 5px 10px;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .controls>.fa-chevron-left {
+        background-color: red;
+        padding: 5px 10px 5px 5px;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <h1>Slider With JavaScript</h1>
+        <div class="outer-slider">
+            <div id="slider">
+                <img class="slides active" src="./img/1.jpg" alt="">
+                <img class="slides" src="./img/2.jpg" alt="">
+                <img class="slides" src="./img/3.jpg" alt="">
+                <img class="slides" src="./img/4.jpg" alt="">
+            </div>
+            <div class="controls">
+                <i onclick="imageSlides(-1)" class="fa fa-chevron-left"></i>
+                <i onclick="imageSlides(1)" class="fa fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="./app.js"></script>
+
+</html>
